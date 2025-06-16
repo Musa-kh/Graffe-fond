@@ -12,7 +12,9 @@ body {
     padding: 0;
     font-family: 'Sora', sans-serif;
 }
-
+html{
+    overflow-x: hidden;
+}
 h1{
     margin-top: 130px;
 }
@@ -1340,7 +1342,7 @@ h5{
         left: -3000px; /* Далеко за экраном */
         width: 30.2%;
         min-width: 210px;
-        height: 100vh;
+        height: 100%;
         background-color: #2F2F2F;
         transition: left 0.6s ease-in-out;
         overflow-y: auto;
@@ -1366,7 +1368,10 @@ h5{
     .sidebar-links a:hover {
         color: #EAC666;
     }
-
+    .close-ico{
+        padding-top: 50px;
+        padding-left: 20px;
+    }
     /*.modal1 {*/
     /*    display: none; !* Hidden by default *!*/
     /*    position: fixed; !* Stay in place *!*/
@@ -1380,6 +1385,7 @@ h5{
     /*    background-color: rgb(0,0,0); !* Fallback color *!*/
     /*    background-color: rgba(0,0,0,0.4); !* Black w/ opacity *!*/
     /*}*/
+    /*!* Modal Content *!*/
     /*.modal-content1 {*/
     /*    background-color: #fefefe;*/
     /*    margin: auto;*/
@@ -1387,6 +1393,8 @@ h5{
     /*    border: 1px solid #888;*/
     /*    width: 80%;*/
     /*}*/
+
+    /*!* The Close Button *!*/
     /*.close1 {*/
     /*    color: #aaaaaa;*/
     /*    float: right;*/
@@ -1394,6 +1402,12 @@ h5{
     /*    font-weight: bold;*/
     /*}*/
 
+    /*.close1:hover,*/
+    /*.close1:focus {*/
+    /*    color: #000;*/
+    /*    text-decoration: none;*/
+    /*    cursor: pointer;*/
+    /*}*/
 }
 @media screen and (max-width: 850px) {
 
