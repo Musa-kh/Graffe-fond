@@ -52,7 +52,11 @@ ul {
     height: 55px;
     justify-content: space-evenly;
     margin-top: -1px;
+    transition: transform 0.3s ease; /* плавное скрытие/появление */
+}
 
+.header-computer.hide-header {
+    transform: translateY(-100%); /* уезжает вверх */
 }
 .header-navigation {
     display: flex; /* Для выравнивания и устойчивости */
@@ -1381,6 +1385,11 @@ h5{
         margin-top: -1px;
         margin-left: -1px;
         z-index: 99998;
+        transition: transform 0.3s ease; /* плавное скрытие/появление */
+    }
+
+    .mobile-header.hide-header {
+        transform: translateY(-100%); /* уезжает вверх */
     }
 
     .menu-icon {
@@ -2521,5 +2530,5 @@ h5{
         padding:0 30px ;
         justify-content: space-between  ;
     }
-
 }
+
