@@ -32,6 +32,9 @@ ul {
 
 .logo-computer{
     display: flex;
+    width: 140px;
+    height: 40px;
+    margin-top: 8px;
 }
 .logo-computer span{
     margin-left: 10px;
@@ -39,15 +42,25 @@ ul {
     width: 30px;
     color: #ffffff;
 }
-.header-computer{
+.header-computer {
+    position: fixed;
     display: flex;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0,.6);
+    max-width: 100%;
+    width: 100%;
+    height: 55px;
+    justify-content: space-evenly;
+    margin-top: -1px;
+
 }
 .header-navigation {
-    margin-left: 20px;
     display: flex; /* Для выравнивания и устойчивости */
     max-width: none; /* Убираем ограничение ширины */
     width: auto;
     gap: 30px;
+    margin-top: 8px;
+
 
 }
 
@@ -69,7 +82,7 @@ ul {
 }
 .banner {
     background-image: url(../assets/banner.png);
-    padding-top: 15px;
+    padding-top:1px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -130,6 +143,7 @@ ul {
 
 .account-button{
     margin-left: 20px;
+    margin-top: 8px;
     font-weight: 500;
     font-size: 20px;
     display: flex;
@@ -1001,6 +1015,71 @@ h5{
     display: none;
 }
 
+.social-links a {
+    outline: none;
+    text-decoration: none;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0,.3);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+
+}
+.modal_box{
+    position: relative;
+
+    width: 250px;
+    height: 190px;
+    z-index: 1;
+    background-color:white;
+    border-radius: 15px ;
+    -webkit-box-shadow: 2px 1px 56px 35px rgba(255, 231, 21, 0.2);
+    -moz-box-shadow: 2px 1px 56px 35px rgba(255, 231, 21, 0.2);
+    box-shadow: 2px 1px 56px 35px rgba(255, 231, 21, 0.2);
+    transform: scale(0);
+    transition: transform .8s;
+}
+.modal-close-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: 0;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.modal_box img {
+    width: 50px;
+    height: 50px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.modal_box p{
+    color: black;
+    line-height: 124%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modal.open{
+    visibility: visible;
+    opacity: 1;
+}
+.modal.open .modal_box{
+    transform: scale(1);
+}
 
 
 @media screen and (max-width: 1210px) {
@@ -1274,18 +1353,17 @@ h5{
     }
 }
 @media screen and (max-width: 1024px) {
-    body {
-        overflow-x: hidden;
-    }
+
     .sidebar {
         display: block;
     }
-    .header-computer.container {
+    .header-computer {
         display: none;
     }
 
+
     .banner {
-        padding: 0;
+        padding: 1px;
     }
 
     .cloud-img-1 {
@@ -1293,11 +1371,16 @@ h5{
     }
 
     .mobile-header {
+        position: fixed;
         display: flex;
-        background: #2F2F2F;
+        background-color: #2F2F2F;
         justify-content: space-evenly;
-
         height: 60px;
+        max-width: 100%;
+        width: 100%;
+        margin-top: -1px;
+        margin-left: -1px;
+        z-index: 99998;
     }
 
     .menu-icon {
@@ -1354,7 +1437,7 @@ h5{
         left: 0;
     }
     .sidebar-links {
-        margin-top: 60px;
+        margin-top: 95px;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -1368,45 +1451,10 @@ h5{
     .sidebar-links a:hover {
         color: #EAC666;
     }
-    .close-ico{
-        padding-top: 50px;
-        padding-left: 20px;
-    }
-    /*.modal1 {*/
-    /*    display: none; !* Hidden by default *!*/
-    /*    position: fixed; !* Stay in place *!*/
-    /*    z-index: 1; !* Sit on top *!*/
-    /*    padding-top: 100px; !* Location of the box *!*/
-    /*    left: 0;*/
-    /*    top: 0;*/
-    /*    width: 100%; !* Full width *!*/
-    /*    height: 100%; !* Full height *!*/
-    /*    overflow: auto; !* Enable scroll if needed *!*/
-    /*    background-color: rgb(0,0,0); !* Fallback color *!*/
-    /*    background-color: rgba(0,0,0,0.4); !* Black w/ opacity *!*/
-    /*}*/
-    /*!* Modal Content *!*/
-    /*.modal-content1 {*/
-    /*    background-color: #fefefe;*/
-    /*    margin: auto;*/
-    /*    padding: 20px;*/
-    /*    border: 1px solid #888;*/
-    /*    width: 80%;*/
-    /*}*/
-
-    /*!* The Close Button *!*/
-    /*.close1 {*/
-    /*    color: #aaaaaa;*/
-    /*    float: right;*/
-    /*    font-size: 28px;*/
-    /*    font-weight: bold;*/
-    /*}*/
-
-    /*.close1:hover,*/
-    /*.close1:focus {*/
-    /*    color: #000;*/
-    /*    text-decoration: none;*/
-    /*    cursor: pointer;*/
+    /*.close-ico{*/
+    /*    margin-top: 16px;*/
+    /*    padding-top: 50px;*/
+    /*    padding-left: 20px;*/
     /*}*/
 }
 @media screen and (max-width: 850px) {
@@ -1904,14 +1952,13 @@ h5{
     }
 
     .profile-card {
-        margin-top: 250px;
-        margin-left: -200px;
+        margin-top: 230px;
+        margin-left: -320px;
     }
 
     .gold-button {
         margin-top: 400px;
         margin-left: -145px;
-        position: absolute; /* Кнопка располагается снизу внутри родителя */
         width: auto; /* Ширина остается адаптивной */
     }
 
@@ -2413,7 +2460,7 @@ h5{
     .form-question {
         position: absolute;
         top: 5280px;
-        left:0;
+        left:-15px;
     }
 
     .form-question img {
@@ -2463,8 +2510,16 @@ h5{
     .social-links{
         width: 300px;
     }
+    .logo-footer p{
+        font-size: 18px;
+        margin-right: 30px;
+    }
+    .footer-copyright{
+        margin-right: 30px;
+    }
     .footer-block{
-        justify-content: space-around;
+        padding:0 30px ;
+        justify-content: space-between  ;
     }
 
 }

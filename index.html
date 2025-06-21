@@ -10,7 +10,7 @@
 <body>
 <div class="banner">
   <header>
-    <div class="container header-computer">
+    <div class="header-computer">
       <div class="logo-computer">
         <img src="assets/logo.svg" alt="логотип Giraffe Fund">
         <span>GIRAFFE FUND</span>
@@ -45,12 +45,12 @@
       </div>
     </div>
     <aside class="sidebar">
-      <div class="close-ico">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
+<!--      <div class="close-ico">-->
+<!--        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--          <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round"/>-->
+<!--          <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"/>-->
+<!--        </svg>-->
+<!--      </div>-->
       <ul class="sidebar-links">
         <li><a href="">ГЛАВНАЯ</a></li>
         <li><a href="">О НАС</a></li>
@@ -244,12 +244,31 @@
         </div>
         <button id="buttonles">Зарегистрироваться на вебинар</button>
       </form>
-<!--      <div id="myModal1" class="modal1">-->
-<!--        <div class="modal-content1">-->
-<!--          <span class="close1">&times;</span>-->
-<!--          <p>Вы зарегистрировались на бесплатный вебинар</p>-->
-<!--        </div>-->
-<!--      </div>-->
+      <div class="modal" id="my-modal">
+        <div class="modal_box">
+          <button class="modal-close-btn" id="close-my-modal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <img src="assets/logo.svg" alt="">
+          <p>Вы зарегистрировались <br>
+          на бесплатный вебинар</p>
+        </div>
+      </div>
+      <div class="modal" id="error-modal">
+        <div class="modal_box">
+          <button class="modal-close-btn" id="close-error-modal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <img src="assets/logo.svg" alt="">
+          <p>Вы не ввели <br> некорректные данные</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -302,14 +321,26 @@
       <img src="assets/traingle-gold.svg" alt="">
       <form class="form-block-question">
         <p>Задать вопрос</p>
-        <input placeholder="Имя" type="text">
-        <input placeholder="Телефон" type="number">
-        <input placeholder="Email" type="text">
-        <input placeholder="Ваш вопрос" type="text">
-        <button>
+        <input id="username1" placeholder="Имя" type="text">
+        <input id="phone1" placeholder="Телефон" type="number">
+        <input id="email1" placeholder="Email" type="text">
+        <input id="question1" placeholder="Ваш вопрос" type="text">
+        <button id="button1" >
           Отправить
         </button>
       </form>
+      <div class="modal" id="question-modal">
+        <div class="modal_box">
+          <button class="modal-close-btn" id="close-question-modal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <img src="assets/logo.svg" alt="">
+          <p>Вы задали вопрос</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -325,12 +356,18 @@
         Giraffe Fund</p>
     </div>
     <div class="social-links">
-      <img src="assets/telegram-img.png" alt="">
-      <img src="assets/instagram-img.png" alt="">
+      <a href="https://t.me/grafeFondchat" target="_blank">
+        <img src="assets/telegram-img.png" alt="Telegram">
+      </a>
+      <a href="https://www.instagram.com/musa_hinizov?igsh=MWUzbGowaGsyYnF5eQ==" target="_blank">
+        <img src="assets/instagram-img.png" alt="Instagram">
+      </a>
     </div>
   </div>
 </footer>
 <script src="script/sidebar.js"></script>
 <script src="script/send-message.js"></script>
+<script src="script/send-question.js" ></script>
+<script src="script/open-modal1.js"></script>
 </body>
 </html>
