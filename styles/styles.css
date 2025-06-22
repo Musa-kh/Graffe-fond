@@ -1455,7 +1455,7 @@ h5{
     .sidebar-links a {
         color: white;
         font-weight: 600;
-        text-decoration: none;
+        text-decoration: none;  
         padding: 0 10%;
     }
     .sidebar-links a:hover {
@@ -1976,18 +1976,14 @@ h5{
     }
 
     .menu-icon {
-        margin-left: 10px;
         margin-top: 13px;
-        margin-right: 125px;
         width: 35px;
         height: 35px;
     }
 
     .logo-mobile {
         display: flex;
-        margin-left: 10px;
         margin-top: 7px;
-        margin-right: 150px;
     }
 
     .logo-mobile img {
@@ -2006,9 +2002,7 @@ h5{
     }
 
     .profile-icon {
-        margin-left: 0;
         margin-top: 10px;
-        margin-right: 10px;
     }
 
     .investment-returns {
@@ -2530,5 +2524,9 @@ h5{
         padding:0 30px ;
         justify-content: space-between  ;
     }
+}
+
+@media screen and (max-width: 500px){
+
 }
 
