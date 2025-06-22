@@ -1971,40 +1971,6 @@ h5{
         width: auto; /* Ширина остается адаптивной */
     }
 
-    .mobile-header {
-        display: flex;
-    }
-
-    .menu-icon {
-        margin-top: 13px;
-        width: 35px;
-        height: 35px;
-    }
-
-    .logo-mobile {
-        display: flex;
-        margin-top: 7px;
-    }
-
-    .logo-mobile img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .logo-mobile span {
-        color: #ffffff;
-        width: 50px;
-        margin-left: 10px;
-        margin-top: 5px;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1;
-    }
-
-    .profile-icon {
-        margin-top: 10px;
-    }
-
     .investment-returns {
         width: 490px;
         height: 450px;
@@ -2144,6 +2110,7 @@ h5{
         margin-left: -5px;
         margin-top: -470px;
     }
+
 
     .cloud-on-video {
         display: flex;
@@ -2329,6 +2296,7 @@ h5{
         width: 485px;
     }
 
+
     .form1-bg{
         display: flex;
         margin-top:480px;
@@ -2470,7 +2438,6 @@ h5{
         width: 484px;
         height: 500px;
     }
-
     .form-block-question {
         left: 40px;
         width: 369px;
@@ -2525,8 +2492,3 @@ h5{
         justify-content: space-between  ;
     }
 }
-
-@media screen and (max-width: 500px){
-
-}
-
