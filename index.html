@@ -26,7 +26,7 @@
           <li><a href="https://t.me/Musa_202" target="_blank">КОНТАКТЫ</a></li>
         </ul>
       </nav>
-      <button class="account-button"><span>Личный кабинет</span>
+      <button id="my-room-but" class="account-button"><span>Личный кабинет</span>
         <img src="./assets/profile-icon2.svg" alt="профиль" loading="lazy">
       </button>
     </div>
@@ -85,6 +85,39 @@
   <div id="our"></div>
 </div>
 <section class="our-philosophy-section">
+  <div  class="modal-reg" id="my-modal-reg">
+    <div class="modal-reg-box">
+      <button class="modal-close-btn" id="close-my-modal1">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <p class="regi-p">Зарегистрироваться</p>
+      <input placeholder="Логин" type="text">
+      <input placeholder="Email" type="text">
+      <input placeholder="Пароль" type="text">
+      <input placeholder="Повторить пароль" type="text">
+      <button class="register-modal-but">Зарегистрироваться</button>
+      <p class="link-p"><a href="#" id="switch-to-login">у меня уже есть аккаунт</a></p>
+    </div>
+  </div>
+  <div class="modal-login" id="my-modal-login">
+    <div class="modal-login-box">
+      <button class="modal-close-btn" id="close-my-modal2">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <p class="login-p">Войти</p>
+      <input placeholder="Логин/Email" type="text">
+      <input placeholder="Пароль" type="text">
+      <button class="login-modal-but">Войти</button>
+      <button class="register-modal-but2" id="create-account">Создать аккаунт</button>
+      <p class="link-p"><a href="#">Забыли пароль?</a></p>
+    </div>
+  </div>
   <div class="philosophy-wrapper">
     <div class="investment-returns container">
       <div class="philosophy">
@@ -371,5 +404,6 @@
 <script src="script/send-message.js"></script>
 <script src="script/send-question.js" ></script>
 <script src="script/hide-on-scroll.js"></script>
+<script src="script/my-room.js"></script>
 </body>
 </html>
