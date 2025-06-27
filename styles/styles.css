@@ -2085,7 +2085,30 @@ h5{
         font-size: 26px;
     }
 }
+@media screen and (max-width: 550px) {
+    .modal-reg-box{
+        width: 430px;
+    }
+    .modal-reg-box input{
+        width: 380px;
+    }
+    .register-modal-but{
+        width: 380px;
+    }
+    .modal-login-box{
+        width: 430px;
+    }
+    .modal-login-box input{
+        width: 380px;
+    }
+    .login-modal-but{
+        width: 380px;
+    }
+    .register-modal-but2{
+        width: 380px;
+    }
 
+}
 @media screen and (max-width: 500px) {
     .header-computer.container {
         display: none;

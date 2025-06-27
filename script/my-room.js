@@ -16,3 +16,6 @@ document.getElementById("create-account").addEventListener("click", function() {
     document.getElementById("my-modal-reg").classList.add("open");
     document.getElementById("my-modal-login").classList.remove("open");
 })
+document.getElementById("profile-icon-click").addEventListener("click", function() {
+    document.getElementById("my-modal-reg").classList.add("open");
+})
