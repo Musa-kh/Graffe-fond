@@ -1308,18 +1308,8 @@ h5{
     transform: scale(0);
     transition: transform .8s;
 }
-.modal-my-room-box img{
-    margin-left: 140px ;
-    width: 180px;
-    height: 180px;
-}
-.modal-my-room-box p{
-    padding-top: 10px;
-    font-size: 27px;
-    line-height: 126%;
-}
 .log-out-btn{
-    margin-top: 15px;
+    margin-top: 25px;
     width: 460px;
     height: 60px;
     gap: 16px;
@@ -1344,6 +1334,44 @@ h5{
 }
 .modal-my-room.open .modal-my-room-box{
     transform: scale(1);
+}
+.logo-modal{
+    display: flex;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+.logo-modal img{
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+.user-modal-disp{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 140%;
+    margin: 0;
+}
+.user-email-disp{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 140%;
+    margin-top: 10px;
+    color: #616161
+}
+h6{
+    font-size: 20px;
+    margin:5px 0 0 10px;
+}
+.user-modal{
+    margin-top: -15px;
+    margin-left: 130px;
+    width: 200px;
+    height: 200px;
 }
 
 @media screen and (max-width: 1210px) {
@@ -2176,14 +2204,19 @@ h5{
         width: 430px;
         height: 440px;
     }
-    .modal-my-room-box p{
-        font-size:20px;
+    .logo-modal img{
+        margin-top: 0;
     }
-    .modal-my-room-box img{
-        margin-left: 100px;
+    h6{
+        margin-top: 0;
+        font-size: 16px;
     }
     .log-out-btn{
         width: 380px;
+        margin-top: 0;
+    }
+    .user-modal{
+        margin-left: 90px;
     }
 
 }

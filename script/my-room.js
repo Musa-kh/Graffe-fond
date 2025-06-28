@@ -103,8 +103,8 @@ document.querySelector('.login-modal-but').addEventListener('click', () => {
 
 // === Показ профиля в модалке ===
 function showProfile(user) {
-    document.getElementById("user-name-display").innerText = `Имя: ${user.name || "-"}`;
-    document.getElementById("user-email-display").innerText = `Email: ${user.email || "-"}`;
+    document.getElementById("user-name-display").innerText = `${user.name || "-"}`;
+    document.getElementById("user-email-display").innerText = `${user.email || "-"}`;
     document.getElementById("my-room-modal").classList.add("open");
 }
 
